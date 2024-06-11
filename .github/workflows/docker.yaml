@@ -27,28 +27,35 @@ jobs:
     - name: Build and push image Aliyun
       run: |
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
-        while IFS= read -r line; do
-          [[ -z "$line" ]] && continue
-          echo "docker pull $line"
-          docker pull $line
-          platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
-          echo "platform is $platform"
-          # 如果存在架构信息 将架构信息拼到镜像名称前面
-          if [ -z "$platform" ]; then
-              platform_prefix=""
-          else
-              platform_prefix="${platform//\//_}_"
-          fi
-          echo "platform_prefix is $platform_prefix"
-          # 提取镜像的repository和tag，假设格式为repository:tag或者registry/repository:tag  
-          # 使用awk的BEGIN块来设置FS（字段分隔符）为/或:，并输出第二个字段（repository）和最后一个字段（tag）  
-          image_parts=$(echo "$line" | awk -F'[/:]' 'BEGIN {OFS="/"} {print $2, $NF}')
-          repository=$(echo "$image_parts" | awk '{print $1}')
-          tag=$(echo "$image_parts" | awk '{print $2}')
+
+        while IFS= read -r line; do  
+          # 跳过空行  
+          [[ -z "$line" ]] && continue  
+          
+          # 提取repository和tag  
+          IFS=':' read -ra parts <<< "$line"  
+          repository="${parts[0]}"  
+          tag="${parts[1]}"  
+          
+          # 如果没有指定tag,则默认为latest  
+          if [[ -z "$tag" ]]; then  
+            tag="latest"  
+          fi  
+          
           # 构造新的镜像名称  
-          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$repository:$tag"
-          echo "docker tag $line $new_image"
-          docker tag $line $new_image
-          echo "docker push $new_image"
-          docker push $new_image
+          # 如果repository中包含/,则保留整个路径作为新的repository名称  
+          # 否则,只使用repository作为新的repository名称  
+          if [[ "$repository" == */* ]]; then  
+            new_repository="${repository#*/}" # 移除开头的/和可能的registry部分  
+          else  
+            new_repository="$repository"  
+          fi  
+          new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$new_repository:$tag"  
+          
+          echo "docker pull $line"  
+          docker pull "$line"  
+          echo "docker tag $line $new_image"  
+          docker tag "$line" "$new_image"  
+          echo "docker push $new_image"  
+          docker push "$new_image"  
         done < images.txt
