@@ -1,5 +1,5 @@
 alpine
-python:alpine3.19
-kasmweb/nginx:1.25.3
---platform=linux/amd64 redis:7.0.15-alpine3.20
---platform=linux/arm/v7 redis:7.0.15-alpine3.20
+docker.io/victoriametrics/operator:v0.39.2
+docker.io/victoriametrics/vminsert:v1.95.0-cluster
+docker.io/victoriametrics/vmselect:v1.95.1-cluster
+docker.io/victoriametrics/vmstorage:v1.95.0-cluster
