@@ -47,8 +47,8 @@ jobs:
           tag=$(echo "$image_parts" | awk '{print $2}')
           # 构造新的镜像名称  
           new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$repository:$tag"
-          echo "docker tag $image $new_image"
-          docker tag $image $new_image
+          echo "docker tag $line $new_image"
+          docker tag $line $new_image
           echo "docker push $new_image"
           docker push $new_image
         done < images.txt
