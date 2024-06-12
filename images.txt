@@ -1,5 +1,2 @@
-alpine
-docker.io/victoriametrics/operator:v0.39.2
-docker.io/victoriametrics/vminsert:v1.95.0-cluster
-docker.io/victoriametrics/vmselect:v1.95.1-cluster
-docker.io/victoriametrics/vmstorage:v1.95.0-cluster
+easysoft/zentao:17.8
+docker.io/bitnami/nginx-ingress-controller:1.9.3-debian-11-r0
