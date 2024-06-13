@@ -1,1 +1,2 @@
-docker.io/library/docker:24.0.5-dind
+golang:1.21-alpine
+
