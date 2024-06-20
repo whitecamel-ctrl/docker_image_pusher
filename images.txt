@@ -1,2 +1,2 @@
-kubesphere/kube-state-metrics:v2.5.0
-kubesphere/kube-rbac-proxy:v0.11.0
+docker.io/nacos/nacos-server:v2.2.3
+docker.io/ygqygq2/mysql-exec-sql:latest
