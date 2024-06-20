@@ -1,2 +1,2 @@
-apache/apisix-dashboard:2.11-alpine
-kubesphere/pause:3.9
+kubesphere/kube-state-metrics:v2.5.0
+kubesphere/kube-rbac-proxy:v0.11.0
