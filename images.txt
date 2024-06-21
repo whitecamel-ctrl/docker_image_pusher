@@ -1,2 +1,2 @@
-docker.io/nacos/nacos-server:v2.2.3
-docker.io/ygqygq2/mysql-exec-sql:latest
+docker.io/bitnami/minio:2023.9.23-debian-11-r0
+
