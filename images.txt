@@ -1,3 +1,2 @@
-docker.io/bitnami/minio-client:2023.9.20-debian-11-r2
-docker.io/bitnami/os-shell:11-debian-11-r77
+docker.io/bitnami/etcd:3.4.18-debian-10-r14
 
