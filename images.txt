@@ -1,4 +1,2 @@
-docker.io/victoriametrics/operator:v0.39.2
-docker.io/victoriametrics/vmagent:v1.95.0
-
+docker.io/bitnami/nginx-ingress-controller:1.9.3-debian-11-r0
 
