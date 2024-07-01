@@ -1,3 +1,2 @@
-busybox:1.28
-apache/apisix:2.14.1-alpine
+docker.io/bitnami/etcd:3.5.4-debian-11-r14
 
