@@ -1,2 +1,2 @@
-apache/apisix-dashboard:2.13-alpine
+docker.io/bitnami/rabbitmq/3.11.11-debian-11-r0
 
