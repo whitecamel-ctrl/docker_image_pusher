@@ -1,3 +1,2 @@
-radondb/xenon:v3.0.0
-radondb/mysql8-sidecar:v3.0.0
+radondb/mysql80-sidecar:v3.0.0
 busybox:1.32
