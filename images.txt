@@ -1,2 +1,2 @@
-radondb/kube-rbac-proxy:v0.8.0
-radondb/mysql-operator:v3.0.0
+percona/percona-server:8.0.26
+radondb/mysql80-sidecar:v3.0.0
