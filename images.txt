@@ -1,1 +1,2 @@
-eipwork/kuboard:latest
+docker.io/nacos/nacos-server:v2.2.3
+docker.io/ygqygq2/mysql-exec-sql:latest
