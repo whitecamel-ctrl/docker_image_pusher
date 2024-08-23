@@ -1,2 +1,8 @@
-bitnami/mysql:5.7
-xuxueli/xxl-job-admin:2.4.0
+ghcr.io/jumpserver/core-ce:v3.10.7
+ghcr.io/jumpserver/chen:v3.10.7
+ghcr.io/jumpserver/kael:v3.10.7
+ghcr.io/jumpserver/koko:v3.10.7
+ghcr.io/jumpserver/lion:v3.10.7
+ghcr.io/jumpserver/magnus:v3.10.7
+ghcr.io/jumpserver/web:v3.10.7
+
