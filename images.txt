@@ -1,3 +1,5 @@
-quay.io/oceanbase/ob-operator:2.3.1
+oceanbase/oceanbase-cloud-native:4.3.5.0-100000202024123117
+oceanbase/obproxy-ce:4.3.5.0-100000202024123117
+oceanbase/obagent:4.3.5.0-100000202024123117
 
 
