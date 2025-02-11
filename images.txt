@@ -1,5 +1,4 @@
-oceanbase/oceanbase-cloud-native:4.3.5.0-100000202024123117
-oceanbase/obproxy-ce:4.3.5.0-100000202024123117
-oceanbase/obagent:4.3.5.0-100000202024123117
+oceanbase/obproxy-ce:4.3.3.0-5
+oceanbase/obagent:4.2.2-100000042024011120
 
 
