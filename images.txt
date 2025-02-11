@@ -1,3 +1,4 @@
-busybox:1.36
+oceanbase/ob-operator:2.2.0
+oceanbase/kube-rbac-proxy:v0.13.1
 
 
