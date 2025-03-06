@@ -1,3 +1,3 @@
-openjdk:17-jdk
+seataio/seata-server:2.2.0
 
 
